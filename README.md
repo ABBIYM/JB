@@ -1,1 +1,1 @@
-PS4 Jailbreak
+PS4 Jailbreak v6.72
