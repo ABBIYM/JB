@@ -13,7 +13,7 @@ body {
 .container {
     text-align: center;
     padding: auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
     transform: translateY(-30%)
 }
 
