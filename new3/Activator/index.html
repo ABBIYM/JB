@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>7.55 GoldHen Host Menu</title>
+</head> 
+<body style="background-color:#3462a8;color:white;font-size:20px;text-align:center;">
+<h1 style='font-size:40px;margin:0;'>7.55 GoldHen Host Menu</h1>
+<h3 style='font-size:26px;margin:0;'>Little Version by Chronoss</h3></body>
+<hr><br><br><br><br>
+<body style="background-color:#3462a8;color:white;font-size:20px;text-align:center;" style=overflow:hidden onload="go()">
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = 'index.html';
+</script>
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done(){}
+
+window.midExploit = function()
+{
+    preloadScripts(['../blob.js', '../jb.js', '../mira/mira.js', 'payload.js', '../netcat.js', 'frontend.js'], go);
+}
+
+window.postExploit = function()
+{
+    history.pushState({}, '', '.');
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script>
+<script src="../webkit-7.50/utils.js"></script>
+<script src="../webkit-7.50/int64.js"></script>
+<script src="../webkit-7.50/ps4.js"></script>
+<button style=opacity:0 id="input1" onfocus="handle2()"></button>
+<button style=opacity:0 id="input2"></button>
+<button style=opacity:0 id="input3" onfocus="handle2()"></button>
+<select style=opacity:0 id="select1"><option value="value1">Value1</option></select>
+</body>
+</html>
